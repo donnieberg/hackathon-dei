@@ -1,8 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
-const propTypes = {};
 
 class TabPanel extends React.Component {
   constructor(props) {
@@ -13,7 +9,12 @@ class TabPanel extends React.Component {
 
   render() {
     return (
-      <div id="tab-default-1" className="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+      <div 
+        aria-labelledby="tab-default-1__item"
+        className="slds-tabs_default__content slds-show" 
+        id="tab-default-1" 
+        role="tabpanel" 
+      >
         {this.props.children}
       </div>
     );
@@ -21,7 +22,6 @@ class TabPanel extends React.Component {
 }
 
 TabPanel.displayName = "TabPanel";
-TabPanel.propTypes = propTypes;
 
 export default TabPanel;
 
