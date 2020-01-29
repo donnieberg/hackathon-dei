@@ -1,11 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import GlobalHeader from './components/globalHeader';
+import Tabset from './components/tabset';
+import Post from './components/post';
+import Question from './components/question';
+import FeedItem from './components/feedItem';
 
 function App() {
   return (
     <div className="App">
-      <button className="slds-button slds-button_neutral">Click </button>
+      <GlobalHeader />
+      <div className="width-tabs center-horz">
+        <Tabset 
+          tabs={[
+          <Post label="Post" />,
+          <Question label="Question" />
+          ]}
+        />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+        <FeedItem />
+      </div>
     </div>
   );
 }
