@@ -30,5 +30,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@salesforce-ux/design-system": "^2.11.2",
+    "@salesforce-ux/icons": "^9.31.2",
+    "classnames": "^2.2.6"
   }
 }
