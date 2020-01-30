@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import GlobalHeader from './components/globalHeader';
-import Poll from './components/Poll';
+import Poll from './components/poll';
 import Tabset from './components/tabset';
 import Post from './components/post';
 import Question from './components/question';

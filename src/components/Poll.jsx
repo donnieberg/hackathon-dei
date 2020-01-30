@@ -15,6 +15,7 @@ class Poll extends React.Component {
     ANSWER_INDICES.forEach(el => this.state['answer' + el] = el <= 2 ? true : null)
 
     this.answerContainer = React.createRef();
+    this.questionInput = React.createRef();
     this.addAnswer = this.addAnswer.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -31,8 +32,6 @@ class Poll extends React.Component {
     if (count !== this.state.filledAnswers) {
       this.setState({filledAnswers : count});
     }
-
-    // focus
   }
 
   renderAnswers() {
@@ -61,17 +60,17 @@ class Poll extends React.Component {
 
   render() {
     return (
-      <div className="slds-box slds-theme_default slds-text-align_left">
+      <div class="cf">
       	<label className="slds-form-element__label">Question</label>
-        <input className="slds-input" placeholder="What would you like to ask?"/>
+        <input className="slds-input" placeholder="What would you like to ask?" value={this.state.question} onChange={(e) => {this.setState({question: e.target.value})}}/>
 
         <div className="slds-box slds-theme_shade slds-m-vertical_small" ref={this.answerContainer}>
           {this.renderAnswers()}
         </div>
 
         <button
-          className="slds-button slds-button_brand"
-          disabled={this.state.filledAnswers > 1 ? null : true}
+          className="slds-button slds-button_brand fr mts"
+          disabled={this.state.filledAnswers > 1 && this.state.question ? null : true}
         >
           Ask
         </button>
@@ -115,7 +114,9 @@ class Answer extends React.Component {
   }
 
   componentDidMount() {
-    this.input.current.focus();
+    if(this.props.index > 2) {
+      this.input.current.focus();
+    }
   }
 
   renderDeleteButton() {
@@ -134,8 +135,9 @@ class Answer extends React.Component {
 
   render() {
     return (
-      <div className="slds-media">
-        <div className="slds-media__body slds-m-bottom_x-small">
+      <div className="slds-grid slds-grid_vertical-align-center slds-m-bottom_x-small">
+        <div className="slds-col slds-size_1-of-12"></div>
+        <div className="slds-col slds-size_10-of-12">
           <input
             ref={this.input}
             className="slds-input"
@@ -145,7 +147,7 @@ class Answer extends React.Component {
             placeholder={this.props.placeholder}
           />
         </div>
-        <div className="slds-media__figure slds-media__figure_reverse">
+        <div className="slds-colslds-size_1-of-12 slds-p-left_x-small">
           {this.renderDeleteButton()}
         </div>
       </div>
