@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-
 import GlobalHeader from './components/globalHeader';
+import Poll from './components/Poll';
 import Tabset from './components/tabset';
 import Post from './components/post';
 import Question from './components/question';
@@ -15,7 +15,8 @@ function App() {
         <Tabset 
           tabs={[
           <Post label="Post" />,
-          <Question label="Question" />
+          <Question label="Question" />,
+          <Poll label="Poll" />
           ]}
         />
         <ul className="pvl phm list-plain list-horz bg-white">
