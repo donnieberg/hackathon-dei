@@ -5,14 +5,25 @@
 
 /*  COLORS --------------------- */
 .bg-header { background-color: #001f3f; }
+.bg-white { background-color: #fff; }
 .text-white, .text-white a { color: #ffffff; }
 
 
 /*  MISC --------------------- */
 .width-tabs { width: 783px; }
 .center-horz { margin-left: auto; margin-right: auto; }
+.mouse-cursor { cursor: pointer; }
 
+.slds-tabs_default__link:focus, .slds-tabs_default__link:hover {
+  text-decoration: none !important;
+}
 
+.tab-focus:focus,
+.tab-focus:focus {
+  border-bottom: 0.125rem solid #007add; 
+  -webkit-transition:height 300ms;
+  transition:height 300ms;
+}
 
 /*  ============================================================================= */
 /*  ============================================================================= */
@@ -58,6 +69,11 @@
 
 .fl { float: left; }
 .fr { float: right; }
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .center { margin-left: auto; margin-right: auto; }
 .a-top { vertical-align: top; }
