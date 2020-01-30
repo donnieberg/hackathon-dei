@@ -1,17 +1,17 @@
 import React from 'react';
 
 const groupData = [
-  { label: 'Web Components', image: 'groups_code', description: 'Shadow DOM anyone?' },
-  { label: 'Accessibility', image: 'groups_a11y', description: 'a11y rocks!' },
-  { label: 'Cat lovers', image: 'groups_cat', description: 'purrrr..' },
-  { label: 'Bestie Picks Bae', image: 'groups_bpb', description: 'Great group' },
+  { label: 'Web Components', image: 'groupsCode', description: 'Shadow DOM anyone?' },
+  { label: 'Accessibility', image: 'groupsA11y', description: 'a11y rocks!' },
+  { label: 'Cat lovers', image: 'groupsCat', description: 'purrrr..' },
+  { label: 'Dog fans', image: 'groupsDog', description: 'woof!' },
 ]
 
 const GroupSuggestion = ({ label, image, description }) => (
   <li className="pvs slds-media slds-media_center border-gray bbs">
     <div className="slds-media__figure">
       <span className="slds-avatar slds-avatar_large">
-        <img alt="" src={`/assets/${image}.png`} />
+        <img alt="" src={`assets/${image}.png`} />
       </span>
     </div>
     <div className="slds-media__body">

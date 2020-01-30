@@ -2,7 +2,7 @@
   "name": "a11y-interview",
   "version": "0.1.0",
   "private": true,
-  "home": "https://salesforce-ux.github.io/a11y-interview",
+  "homepage": "https://salesforce-ux.github.io/a11y-interview",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
