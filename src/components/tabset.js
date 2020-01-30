@@ -9,12 +9,18 @@ class Tabset extends React.Component {
     };
   }
 
-  renderTabPanels() {
+  renderTabContent() {
     return (
       this.props.tabs.map((tab, index) => {
         return this.state.currentTabIndex === index ? tab : null 
       })
     )
+  }
+  
+  handleTabClick(index) {
+    return () => {
+      this.setState({currentTabIndex: index});
+    }
   }
 
   render() {
@@ -29,12 +35,14 @@ class Tabset extends React.Component {
               role="presentation"
             >
                 <a 
-                  className="slds-tabs_default__link" 
+                  aria-controls={`tab-${index}__panel`}
+                  aria-selected={this.state.currentTabIndex === index ? true : false}
+                  className="slds-tabs_default__link tab-focus" 
+                  href="javascript:void(0)"
+                  id={`tab-${index}__item`}
+                  onClick={this.handleTabClick(index)}
                   role="tab" 
                   tabIndex="0" 
-                  aria-selected="true" 
-                  aria-controls="tab-default-1" 
-                  id="tab-default-1__item"
                 >
                   {tab.props.label}
                 </a>
@@ -43,8 +51,13 @@ class Tabset extends React.Component {
           })}
         </ul>
 
-        <div className="pam">
-        {this.renderTabPanels()}
+        <div 
+          aria-labelledby="tab-default-1__item"
+          className="pam slds-tabs_default__content slds-show" 
+          id="tab-default-1" 
+          role="tabpanel" 
+        >
+        {this.renderTabContent()}
         </div>
       </div>
       );

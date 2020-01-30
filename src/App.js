@@ -18,11 +18,12 @@ function App() {
           <Question label="Question" />
           ]}
         />
-        <FeedItem />
-        <FeedItem />
-        <FeedItem />
-        <FeedItem />
-        <FeedItem />
+        <ul className="pvl phm list-plain list-horz bg-white">
+          <li><FeedItem /></li>
+          <li><FeedItem /></li>
+          <li><FeedItem /></li>
+          <li><FeedItem /></li>
+        </ul>
       </div>
     </div>
   );
