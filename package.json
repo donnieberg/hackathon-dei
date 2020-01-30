@@ -2,6 +2,7 @@
   "name": "a11y-interview",
   "version": "0.1.0",
   "private": true,
+  "home": "https://salesforce-ux.github.io/a11y-interview",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -14,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +38,7 @@
     "@salesforce-ux/design-system": "^2.11.2",
     "@salesforce-ux/icons": "^9.31.2",
     "classnames": "^2.2.6",
+    "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2"
   }
 }
