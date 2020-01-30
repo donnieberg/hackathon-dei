@@ -25,7 +25,7 @@ class Tabset extends React.Component {
 
   render() {
     return (
-      <div className="mvl slds-tabs_default">
+      <div className="mvl brt-s brb-s slds-tabs_default">
         <ul className="slds-tabs_default__nav" role="tablist">
           {this.props.tabs.map((tab, index) => {
             return (

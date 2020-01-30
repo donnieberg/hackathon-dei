@@ -10,9 +10,15 @@
 
 
 /*  MISC --------------------- */
-.width-tabs { width: 783px; }
+.width-tabs { width: 70%; }
+.width-aside { width: 30%; }
+.width-main { width: 80%; }
+
 .center-horz { margin-left: auto; margin-right: auto; }
 .mouse-cursor { cursor: pointer; }
+
+.brt-s { border-top-left-radius: .25rem; border-top-right-radius: .25rem; }
+.brb-s { border-bottom-left-radius: .25rem; border-bottom-right-radius: .25rem; }
 
 .slds-tabs_default__link:focus, .slds-tabs_default__link:hover {
   text-decoration: none !important;
