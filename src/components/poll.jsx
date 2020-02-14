@@ -60,7 +60,7 @@ class Poll extends React.Component {
 
   render() {
     return (
-      <div class="cf">
+      <div className="cf">
       	<label className="slds-form-element__label">Question</label>
         <input className="slds-input" placeholder="What would you like to ask?" value={this.state.question} onChange={(e) => {this.setState({question: e.target.value})}}/>
 
@@ -83,16 +83,15 @@ class Poll extends React.Component {
   }
 
   addAnswer(event, index) {
+    console.log(event, event.shiftKey, event.nativeEvent, event.type);
     const currentAnswer = 'answer' + index;
     const nextAnswer = 'answer' + (index + 1);
     const value = event.target.value;
 
     this.setState({[currentAnswer]: value});
-    if (value && value.length > 0) {
-      if (this.state[nextAnswer] === null) {
-        this.setState({[nextAnswer]: true});
-        return true;
-      }
+    if (this.state[nextAnswer] === null) {
+      this.setState({[nextAnswer]: true});
+      return true;
     }
 
     return false;
