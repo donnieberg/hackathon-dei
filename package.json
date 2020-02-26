@@ -1,8 +1,7 @@
 {
-  "name": "a11y-interview",
+  "name": "hackathon-dei",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://salesforce-ux.github.io/a11y-interview",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -37,6 +36,7 @@
   "devDependencies": {
     "@salesforce-ux/design-system": "^2.11.2",
     "@salesforce-ux/icons": "^9.31.2",
+    "@salesforce/design-system-react": "^0.10.18",
     "classnames": "^2.2.6",
     "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2"
