@@ -19,9 +19,9 @@ class LimitedRaceField extends React.Component {
   render() {
     return (
         <RadioGroup
+          required
           className="mvm"
           labels={{label: 'Race & Ethnicity'}}
-					required
 					onChange={(event) => this.setState({ raceChecked: event.target.value })}
 				>
 			{limitedRaceOptions.map((value) => (
@@ -43,7 +43,7 @@ class FullRaceField extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			inputValue: 'Select an option',
+      inputValue: 'Select Race/Ethnicity',
 			selection: [],
 			checked: [],
 		};
@@ -105,7 +105,6 @@ class FullRaceField extends React.Component {
 		return (
 			<IconSettings iconPath="/assets/icons">
 				<Combobox
-					required
 					assistiveText={{
 						popoverLabel: 'Race & Ethnicity',
 					}}

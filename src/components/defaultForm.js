@@ -26,12 +26,17 @@ class DefaultForm extends React.Component {
       return (
         <div className="cf">
           <div className="fl">
-            <GenderField limited={true} />
+            <GenderField required={true} limited={true} />
           </div>
           <div className="fr">
             <DEIChecker onReplace={() => {this.setState({genderReplaced: true})}}>
-              People may not identify as male or female. Consider adding more options, like so:
-              <GenderField disabled />
+              <p>
+              Is it absolutely necessary to know the person's gender for this meeting? Consider making it not a required field. 
+              </p>
+              <p className="mts">
+              People may not identify as male or female - consider adding more options, like so:
+              </p>
+              <GenderField required={false} disabled />
             </DEIChecker>
           </div>
         </div>
@@ -54,7 +59,12 @@ class DefaultForm extends React.Component {
           </div>
           <div className="fr">
             <DEIChecker onReplace={() => {this.setState({raceReplaced: true})}}>
+              <p className="ptm">
+                Is it absolutely necessary to know the person's race or ethnicity for this meeting? Consider making it not a required field. 
+              </p>
+              <p className="mts">
             Your options may be incomplete, use phrasing considered outdated, or force users to only make one selection. Consider this format and these options instead.
+              </p>
             <RaceField disabled />
           </DEIChecker>
           </div>

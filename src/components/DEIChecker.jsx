@@ -16,11 +16,18 @@ class DEIChecker extends React.Component {
   renderBody() {
     return (
     <div>
-      <h2 id={HEADER_ID}>{PROJECT_NAME}</h2>
+      <h2 className="pvs mbs bbs border-gray" id={HEADER_ID}>{PROJECT_NAME}</h2>
 
       {this.props.children}
     
-      <Button onClick={this.props.onReplace}>Use suggestion</Button>
+      <div className="pvs bbs border-gray"></div>
+      <Button 
+        className="mvm" 
+        variant="brand"
+        onClick={this.props.onReplace}
+      >
+        Use suggestion
+      </Button>
 
     </div>
 

@@ -17,9 +17,10 @@ class GenderField extends React.Component {
 	let options = this.props.limited ? binaryGenderOptions : genderOptions;
     return (
  		<RadioGroup
+          required={this.props.required}
           className="mvm"
 					labels={{label: 'Gender'}}
-					required onChange={(event) => this.setState({ genderChecked: event.target.value })}
+					onChange={(event) => this.setState({ genderChecked: event.target.value })}
 				>
 					{options.map((value) => (
 						<Radio
