@@ -4,6 +4,21 @@ html {
   background: white;
 }
 
+.dei-checker-header {
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.dei-checker {
+	float: right;
+}
+
+.dei-checker img {
+	width: 20px;
+	height: 20px;
+}
+
 
 /*  COLORS --------------------- */
 .bg-header { background-color: #001f3f; }

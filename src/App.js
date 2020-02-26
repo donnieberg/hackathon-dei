@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import DefaultForm from './components/defaultForm';
+import DEIChecker from './components/DEIChecker';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="pvl slds-grid slds-grid_align-center">
+        <DEIChecker />
         <DefaultForm />
       </div>
       );

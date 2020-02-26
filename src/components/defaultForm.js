@@ -1,31 +1,77 @@
 import React from 'react';
 import { Input, RadioGroup, Radio } from '@salesforce/design-system-react';
+import GenderField from './genderField';
+import RaceField from './raceField';
+import DEIChecker from './DEIChecker';
 
 class DefaultForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       genderChecked: null,
-      raceChecked: null
+      raceChecked: null,
+
+      genderReplaced: false,
+      raceReplaced: false
     };
   }
 
-  render() {
-    const binaryGenderOptions = [ 'Male', 'Female' ];
-    const limitedRaceOptions = [ 'White', 'Black', 'Asian', 'Hispanic', 'Other' ];
+  renderGenderField() {
+    if (this.state.genderReplaced) {
+      return (
+        <GenderField/>
+      )
+    }
 
+      return (
+        <div className="cf">
+          <div className="fl">
+            <GenderField limited={true} />
+          </div>
+          <div className="fr">
+            <DEIChecker onReplace={() => {this.setState({genderReplaced: true})}}>
+              People may not identify as male or female. Consider adding more options, like so:
+              <GenderField disabled />
+            </DEIChecker>
+          </div>
+        </div>
+
+
+      )
+  }
+
+  renderRaceField() {
+    if (this.state.raceReplaced) {
+      return (
+        <RaceField/>
+      );
+    } else {
+
+      return (
+        <div className="cf">
+          <div className="fl">
+            <RaceField limited={true} />
+          </div>
+          <div className="fr">
+            <DEIChecker onReplace={() => {this.setState({raceReplaced: true})}}>
+            Your options may be incomplete, use phrasing considered outdated, or force users to only make one selection. Consider this format and these options instead.
+            <RaceField disabled />
+          </DEIChecker>
+          </div>
+        </div>
+
+
+      )
+    }
+  }
+
+  render() {
     return (
       <main className="slds-col slds-size_2-of-3">
         <h1 className="pbs mbm slds-text-heading_large bbs border-gray">Scholarship Info Session</h1>
         <p className="slds-text-heading_small">
           Want to travel abroad? Planning to attend graduate school? Looking for an award that fits your interests? Join us to learn about nationally competitive scholarships and fellowships that can help you fund your goals. Find out how to apply for 15 endorsed awards, and how to find even more opportunities. All majors and years are welcome. Pizza will be served! RSVP here.
         </p>
-
-        <img 
-          className="slds-size_1-of-2"
-          src="/assets/2019-scholarship-group.jpg" 
-          alt="silly stock image of a group of people lifting one arm" 
-        />
 
         <div className="pvl">
           <Input 
@@ -56,42 +102,11 @@ class DefaultForm extends React.Component {
             required
           />
 
-        <RadioGroup
-          className="mvm"
-					labels={{label: 'Gender'}}
-					required onChange={(event) => this.setState({ genderChecked: event.target.value })}
-				>
-					{binaryGenderOptions.map((value) => (
-						<Radio
-							key={value}
-							id={value}
-							labels={{ label: value }}
-							value={value}
-							checked={this.state.genderChecked === value}
-							variant="base"
-						/>
-					))}
-				</RadioGroup>
+        { this.renderGenderField() }
+        { this.renderRaceField() }
 
-        <RadioGroup
-          className="mvm"
-          labels={{label: 'Race & Ethnicity'}}
-					required
-					onChange={(event) => this.setState({ raceChecked: event.target.value })}
-				>
-					{limitedRaceOptions.map((value) => (
-						<Radio
-							key={value}
-							id={value}
-							labels={{ label: value }}
-							value={value}
-							checked={this.state.raceChecked === value}
-							variant="base"
-						/>
-					))}
-				</RadioGroup>
-        
         </div>
+        
       </main>
     );
   }
