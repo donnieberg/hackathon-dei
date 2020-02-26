@@ -21,6 +21,12 @@ class DefaultForm extends React.Component {
           Want to travel abroad? Planning to attend graduate school? Looking for an award that fits your interests? Join us to learn about nationally competitive scholarships and fellowships that can help you fund your goals. Find out how to apply for 15 endorsed awards, and how to find even more opportunities. All majors and years are welcome. Pizza will be served! RSVP here.
         </p>
 
+        <img 
+          className="slds-size_1-of-2"
+          src="/assets/2019-scholarship-group.jpg" 
+          alt="silly stock image of a group of people lifting one arm" 
+        />
+
         <div className="pvl">
           <Input 
             id="full-name" 
