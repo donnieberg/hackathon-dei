@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import GenderQuestion from './components/genderQuestion';
+import DefaultForm from './components/defaultForm';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,8 +12,8 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App">
-        <GenderQuestion />
+      <div className="pvl slds-grid slds-grid_align-center">
+        <DefaultForm />
       </div>
       );
   }
