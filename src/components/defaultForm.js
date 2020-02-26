@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, RadioGroup, Radio } from '@salesforce/design-system-react';
+import { Input, RadioGroup, Radio, Button } from '@salesforce/design-system-react';
 import GenderField from './genderField';
 import RaceField from './raceField';
 import DEIChecker from './DEIChecker';
@@ -77,7 +77,7 @@ class DefaultForm extends React.Component {
 
   render() {
     return (
-      <main className="slds-col slds-size_2-of-3">
+      <main className="slds-col slds-size_2-of-3 bg-white slds-box pal">
         <h1 className="pbs mbm slds-text-heading_large bbs border-gray">Scholarship Info Session</h1>
         <p className="slds-text-heading_small">
           Want to travel abroad? Planning to attend graduate school? Looking for an award that fits your interests? Join us to learn about nationally competitive scholarships and fellowships that can help you fund your goals. Find out how to apply for 15 endorsed awards, and how to find even more opportunities. All majors and years are welcome. Pizza will be served! RSVP here.
