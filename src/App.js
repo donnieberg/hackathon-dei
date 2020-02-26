@@ -1,14 +1,22 @@
 import React from 'react';
 import './App.css';
 
-import BinaryGenderField from './components/binaryGenderField';
+import GenderQuestion from './components/genderQuestion';
 
-function App() {
-  return (
-    <div className="App">
-      <BinaryGenderField />
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+		this.state = {
+		};
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <GenderQuestion />
+      </div>
+      );
+  }
 }
 
 export default App;
