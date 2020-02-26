@@ -17,6 +17,7 @@ class GenderField extends React.Component {
 	let options = this.props.limited ? binaryGenderOptions : genderOptions;
     return (
  		<RadioGroup
+ 		  disabled={this.props.disabled }
           required={this.props.required}
           className="mvm"
 					labels={{label: 'Gender'}}

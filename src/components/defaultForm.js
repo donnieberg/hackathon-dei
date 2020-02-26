@@ -29,7 +29,7 @@ class DefaultForm extends React.Component {
             <GenderField required={true} limited={true} />
           </div>
           <div className="fr">
-            <DEIChecker onReplace={() => {this.setState({genderReplaced: true})}}>
+            <DEIChecker title="Gender" onReplace={() => {this.setState({genderReplaced: true})}}>
               <p>
               Is it absolutely necessary to know the person's gender for this meeting? Consider making it not a required field. 
               </p>
@@ -58,7 +58,7 @@ class DefaultForm extends React.Component {
             <RaceField limited={true} />
           </div>
           <div className="fr">
-            <DEIChecker onReplace={() => {this.setState({raceReplaced: true})}}>
+            <DEIChecker title="Race & Ethnicity" onReplace={() => {this.setState({raceReplaced: true})}}>
               <p className="ptm">
                 Is it absolutely necessary to know the person's race or ethnicity for this meeting? Consider making it not a required field. 
               </p>

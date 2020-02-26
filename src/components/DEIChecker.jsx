@@ -16,7 +16,10 @@ class DEIChecker extends React.Component {
   renderBody() {
     return (
     <div>
-      <h2 className="pvs mbs bbs border-gray" id={HEADER_ID}>{PROJECT_NAME}</h2>
+      <h2 className="pvs mbs bbs border-gray" id={HEADER_ID}>
+        <img src="icon.png" className="mhxs" alt={this.props.title ? PROJECT_NAME : ''} width="15" height="15" /> 
+        {this.props.title ? this.props.title : PROJECT_NAME}
+      </h2>
 
       {this.props.children}
     

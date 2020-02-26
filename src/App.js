@@ -14,7 +14,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="pvl slds-grid slds-grid_align-center">
-        <DEIChecker />
+        <div className="dei-checker-header"><DEIChecker>TODO</DEIChecker></div>
         <DefaultForm />
       </div>
       );
