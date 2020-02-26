@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 
+import ImageQuestion from './components/imageQuestion';
 import GenderQuestion from './components/genderQuestion';
+import RaceQuestion from './components/raceQuestion';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +15,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <ImageQuestion />
         <GenderQuestion />
+        <RaceQuestion />
       </div>
       );
   }
