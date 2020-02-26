@@ -1,6 +1,7 @@
 {
   "name": "hackathon-dei",
   "version": "0.1.0",
+  "homepage": "https://donnieberg.github.io/hackathon-dei",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
