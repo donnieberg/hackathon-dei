@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from '@salesforce/design-system-react';
-import GenderField1 from './genderField1';
-import GenderField2 from './genderField2';
+import RaceField1 from './raceField1';
+import RaceField2 from './raceField2';
 
-class GenderQuestion extends React.Component {
+class RaceQuestion extends React.Component {
   constructor(props) {
     super(props);
 		this.state = {
@@ -27,7 +27,7 @@ class GenderQuestion extends React.Component {
   showOriginal() {
     return (
       <div>
-        <GenderField1 />
+        <RaceField1 />
         <Button 
           label="Toggle Suggestion on/off"
           onClick={this.toggleSuggestion}
@@ -39,8 +39,8 @@ class GenderQuestion extends React.Component {
   showSuggestions() {
     return (
       <div>
-        <p>People may not identify as male or female. Consider adding more options like so.</p>
-        <GenderField2 /> 
+        <p>Your options may be incomplete, use phrasing considered outdated, or force users to only make one selection. Consider this format and these options instead.</p>
+        <RaceField2 /> 
         <Button 
           label="Replace"
           onClick={this.replaceOriginal}
@@ -53,7 +53,7 @@ class GenderQuestion extends React.Component {
     return (
       <div className="slds-grid slds-wrap slds-p-top_large">
         <div className="slds-col slds-size_1-of-2 phl">
-          { !this.state.replaceOriginal ? this.showOriginal() : <GenderField2 /> }
+          { !this.state.replaceOriginal ? this.showOriginal() : <RaceField2 /> }
         </div>
         <div className="slds-col slds-size_1-of-2 phl">
           { this.state.showSuggestion && !this.state.replaceOriginal ? this.showSuggestions() : null }
@@ -63,5 +63,5 @@ class GenderQuestion extends React.Component {
   }
 }
 
-export default GenderQuestion;
+export default RaceQuestion;
 

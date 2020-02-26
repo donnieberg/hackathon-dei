@@ -9,7 +9,7 @@ const options = [
 	{ id: '5', label: 'Prefer not to say' },
 ];
 
-class GenderField2 extends React.Component {
+class ImageField2 extends React.Component {
   constructor(props) {
     super(props);
 		this.state = {
@@ -21,19 +21,12 @@ class GenderField2 extends React.Component {
   render() {
     return (
       <div className={this.props.className}>
-      <Combobox
-					id="nonbinary-gender-field"
-					labels={{ label: 'Gender', placeholder: 'Select Gender', }}
-					options={options}
-					selection={this.state.selection}
-					value={this.state.inputValue}
-					variant="readonly"
-				/>
+
       </div>
     );
   }
 }
 
-GenderField2.displayName = "GenderField2";
+ImageField2.displayName = "ImageField2";
 
-export default GenderField2;
+export default ImageField2;

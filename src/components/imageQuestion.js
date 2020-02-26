@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from '@salesforce/design-system-react';
-import GenderField1 from './genderField1';
-import GenderField2 from './genderField2';
+import ImageField1 from './imageField1';
+import ImageField2 from './imageField2';
 
-class GenderQuestion extends React.Component {
+class ImageQuestion extends React.Component {
   constructor(props) {
     super(props);
 		this.state = {
@@ -27,7 +27,7 @@ class GenderQuestion extends React.Component {
   showOriginal() {
     return (
       <div>
-        <GenderField1 />
+        <ImageField1 />
         <Button 
           label="Toggle Suggestion on/off"
           onClick={this.toggleSuggestion}
@@ -39,8 +39,8 @@ class GenderQuestion extends React.Component {
   showSuggestions() {
     return (
       <div>
-        <p>People may not identify as male or female. Consider adding more options like so.</p>
-        <GenderField2 /> 
+        <p>Corrective text...</p>
+        <ImageField2 /> 
         <Button 
           label="Replace"
           onClick={this.replaceOriginal}
@@ -51,9 +51,9 @@ class GenderQuestion extends React.Component {
 
   render() {
     return (
-      <div className="slds-grid slds-wrap slds-p-top_large">
+      <div className="slds-grid slds-wrap">
         <div className="slds-col slds-size_1-of-2 phl">
-          { !this.state.replaceOriginal ? this.showOriginal() : <GenderField2 /> }
+          { !this.state.replaceOriginal ? this.showOriginal() : <ImageField2 /> }
         </div>
         <div className="slds-col slds-size_1-of-2 phl">
           { this.state.showSuggestion && !this.state.replaceOriginal ? this.showSuggestions() : null }
@@ -63,5 +63,5 @@ class GenderQuestion extends React.Component {
   }
 }
 
-export default GenderQuestion;
+export default ImageQuestion;
 
