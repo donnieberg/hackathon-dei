@@ -4,9 +4,9 @@ import { Combobox, Button } from '@salesforce/design-system-react';
 const options = [
 	{ id: '1', label: 'Male' },
 	{ id: '2', label: 'Female' },
-	{ id: '3', label: 'Transgender' },
-	{ id: '4', label: 'Gender Non-conforming' },
-	{ id: '5', label: 'Gender not listed here' },
+	{ id: '3', label: 'Nonbinary' },
+	{ id: '4', label: 'Gender not listed here' },
+	{ id: '5', label: 'Prefer not to say' },
 ];
 
 class GenderField2 extends React.Component {
