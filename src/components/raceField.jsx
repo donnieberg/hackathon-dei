@@ -124,6 +124,7 @@ class FullRaceField extends React.Component {
 										<div className="slds-form-element__control">
 											{fullRaceOptions.map((language, i) => (
 												<Checkbox
+													disabled={this.props.disabled}
 													checked={this.getIsChecked(language)}
 													id={`checkbox-${i}`}
 													key={`checkbox-${i + 1}`}
@@ -155,7 +156,7 @@ class FullRaceField extends React.Component {
 
 class RaceField extends React.Component {
 	render() {
-		return this.props.limited ? <LimitedRaceField/> : <FullRaceField/>
+		return this.props.limited ? <LimitedRaceField/> : <FullRaceField disabled={this.props.disabled} />
 	}
 }
 
